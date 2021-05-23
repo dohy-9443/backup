@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function min(array) {
+      let minNum = array[0];
+
+      for(const Num of array) {
+        if(minNum > Num) {
+          minNum = Num;
+        }
+      }
+      return minNum;
+    }
+
+    const testArr = [9, 1000, 4, 2, 27, 30, 29, 1];
+    console.log(`testArr인 ${testArr} 중에서 최소값인 숫자는 ${min(testArr)} 이다.`);
+  </script>
+</body>
+</html>

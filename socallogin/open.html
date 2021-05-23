@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    a {
+      display: block;
+      width: 300px;
+      height: 150px;
+      text-decoration: none;
+      font-size: 30px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <a href="#" onclick="winOpen('./social.html','new','width=600, height=450, top=50, left=50');">주문하기</a>
+
+  <script>
+
+  //윈도우 오픈시 필요한 주소,재목,넓이,높이,표시위치,표시위치
+  function winOpen(url,title,width,height,top,left){
+    window.open(url,title,"width=600"+width+",height=450"+height+",top=50"+top+",left=50"+left);
+  }
+</script>
+  </script>
+</body>
+</html>

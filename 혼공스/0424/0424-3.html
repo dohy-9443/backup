@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 입력이 문자열이므로 다음과 같은 코드를 사용할 수 있다.
+    const input = prompt('정수를 입력해주세요.', '');
+    const end = input[input.length - 1];
+    console.log(end);
+    // 끝자리 비교
+    if (end === '0' || end === '2' || end === '4' || end === '6' || end === '8') {
+      alert(`${input}은 짝수이다.`)
+    } else {
+      alert(`${input}은 홀수 이다.`);
+    }
+  </script>
+</body>
+</html>

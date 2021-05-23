@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 나머지 매개변수를 사용한 함수 만들기
+    function min(...items) {
+      // 매개변수 items는 배열처럼 사용
+      let arr = items[0];
+
+      for(const item of items) {
+        if(arr > item) {
+          arr = item;
+        }
+      }
+      return arr;
+    }
+
+    // 함수 호출
+    console.log(min(52,273,32,103,275,24,57));
+  </script>
+</body>
+</html>

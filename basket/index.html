@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#sameAddressControl').click(function(){
+          var same = this.checked;
+          $('#billAddress').val(same ? $('#shipAddress').val():'');
+          $('#billCity').val(same ? $('#shipCity').val():'');
+          $('#billState').val(same ? $('#shipState').val():'');
+          $('#billZip').val(same ? $('#shipZip').val():'');
+          if(same == true){
+          		$('#billingAddress input').filter('input:text')
+    	  		.attr('readonly',true)
+     	 		.css('opacity', 0.5);
+     		 }else{
+     		   $('#billingAddress input').filter('input:text').attr('readonly',false)
+     	 		.css('opacity', 1);
+     		 }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <fieldset>
+      <legend>시험 양식</legend>
+      <div>
+        <form name="testForm">
+	      <div>
+	        <label>성:</label>
+	        <input type="text" name="lastName" id="lastName"/>
+	      </div>
+          <div>
+            <label>이름:</label>
+            <input type="text" name="firstName" id="firstName"/>
+          </div>
+          
+          <div id="shippingAddress">
+            <h2>배송지 주소</h2>
+            <div>
+              <label>거리 주소:</label>
+              <input type="text" name="shipAddress"
+                     id="shipAddress"/>
+            </div>
+            <div>
+              <label>도시, 주, 우편번호:</label>
+              <input type="text" name="shipCity" id="shipCity"/>
+              <input type="text" name="shipState" id="shipState"/>
+              <input type="text" name="shipZip" id="shipZip"/>
+            </div>
+          </div>
+          <div id="billingAddress">
+            <h2>청구지 주소</h2>
+            <div>
+              <input type="checkbox" id="sameAddressControl"/>
+              청구지 주소는 배송지 주소와 동일합니다.
+            </div>
+            <div>
+              <label>거리 주소:</label>
+              <input type="text" name="billAddress"
+                     id="billAddress"/>
+            </div>
+            <div>
+              <label>도시, 주, 우편번호:</label>
+              <input type="text" name="billCity" id="billCity"/>
+              <input type="text" name="billState" id="billState"/>
+              <input type="text" name="billZip" id="billZip"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </fieldset>
+  </body>
+</html>
