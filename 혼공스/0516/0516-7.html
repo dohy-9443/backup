@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const max = function(num, ...arr) {
+      let output;
+      let items;
+
+      if(Array.isArray(num)) {
+        output = num[0];
+        items = num;
+      } else if(typeof(num) === 'number') {
+        output = num;
+        items = arr;
+      }
+      for (const arrNum of items) {
+        if (arrNum > output) {
+          output = arrNum;
+        }
+      }
+      return output;
+    }
+
+    console.log(`max(배열) : ${max([1,2,3,4])}`);
+    console.log(`max(숫자, ...) : ${max(1,2,3,4)}`);
+  </script>
+</body>
+</html>

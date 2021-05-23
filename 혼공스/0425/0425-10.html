@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="star"></div>
+  <script>
+    let enter = ''
+    // 변수 enter에 빈 문자열 
+    for(let i = 1; i < 11; i++) {
+      // 줄수 
+      for (let j = 11; j > i; j--) {
+        // 11부터 시작하고 거꾸로 줄거임 
+        enter += ' '
+        // 얘는 띄어쓰기임
+      }
+      for (let k = 0; k < 2 * i - 1; k++) {
+        // 얘가 이제 별 찍을 건데 
+        enter += '*'
+      }
+      enter += '\n'
+      // 한줄 찍고 나서 엔터
+    }
+    console.log(enter);
+    
+  </script>
+</body>
+</html>

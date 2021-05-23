@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 변수를 생성
+    const func = function () {
+      console.log('함수 내부의 코드입니다... 1');
+      console.log('함수 내부의 코드입니다... 2');
+      console.log('함수 내부의 코드입니다... 3');
+      console.log('');
+    }
+
+    // 함수를 호출
+    func(); // -> 기존의 alert(), prompt() 함수처럼 호출할 수 있다.
+    func();
+
+    // 출력
+    console.log(typeof func); // -> 함수의 자료형 확인
+    console.log(func); // -> 함수 자체도 단순한 자료이므로 출력 가능
+  </script>
+</body>
+</html>

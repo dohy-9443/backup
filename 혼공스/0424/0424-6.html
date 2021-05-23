@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const year = Number(prompt('태어난 년도를 입력', ''));
+    const animal = '원숭이,닭,개,돼지,쥐,소,호랑이,토끼,용,뱀,말,양'.split(',');
+
+    alert(`${year}년에 태어났다면 ${animal[year % 12]} 띠입니다.`);
+  </script>
+</body>
+</html>
